@@ -335,35 +335,6 @@
     </actor>
   </actors>
 
-  <!-- This type of decleration no longer works
-  <roles>
-	<role id="employee">
-	  <actors>
-		<actorID>Alice</actorID>
-		<actorID>Bob</actorID>
-		<actorID>Charlie</actorID>
-		<actorID>Daisey</actorID>
-		<actorID>Emilia</actorID>
-		<actorID>Fred</actorID>
-		<actorID>George</actorID>
-		<actorID>Hadrian</actorID>
-		<actorID>Irisa</actorID>
-		<actorID>John</actorID>
-	  </actors>
-	</role>
-	<role id="admin">
-	  <actors>
-	    <actorID>John</actorID>
-		<actorID>Alice</actorID>
-	  </actors>
-	</role>
-	<role id="janitor">
-	  <actors>
-	    <actorID>Bob</actorID>
-	  </actors>
-	</role>
-  </roles>
- -->
   <policies>
     <policy id="pol001">
       <credentials>
@@ -381,9 +352,9 @@
       <enabled>
         <move logged="true"/>
       </enabled>
-      <atLocations>dR1R3</atLocations>                        
+      <atLocations>dR1R5</atLocations>                        
     </policy>
-	<policy id="pol002">
+    <policy id="pol002">
       <credentials>
         <credItem name="card">
           <credData name="pin">
@@ -399,9 +370,99 @@
       <enabled>
         <move logged="true"/>
       </enabled>
-      <atLocations>dR3R1</atLocations>                        
+      <atLocations>dR1R6</atLocations>                        
     </policy>
-	<policy id="pol003">
+        <policy id="pol003">
+      <credentials>
+        <credItem name="card">
+          <credData name="pin">
+            <variable>Y</variable>  
+          </credData>
+        </credItem>
+		<credItem name="id">
+		</credItem>
+        <credData name="pin">                  
+          <variable>Y</variable>
+        </credData>
+      </credentials>    
+      <enabled>
+        <move logged="true"/>
+      </enabled>
+      <atLocations>dR1R7</atLocations>                        
+    </policy>
+        <policy id="pol004">
+      <credentials>
+        <credItem name="card">
+          <credData name="pin">
+            <variable>Y</variable>  
+          </credData>
+        </credItem>
+		<credItem name="id">
+		</credItem>
+        <credData name="pin">                  
+          <variable>Y</variable>
+        </credData>
+      </credentials>    
+      <enabled>
+        <move logged="true"/>
+      </enabled>
+      <atLocations>dR1R9</atLocations>                        
+    </policy>
+        <policy id="pol005">
+      <credentials>
+        <credItem name="card">
+          <credData name="pin">
+            <variable>Y</variable>  
+          </credData>
+        </credItem>
+		<credItem name="id">
+		</credItem>
+        <credData name="pin">                  
+          <variable>Y</variable>
+        </credData>
+      </credentials>    
+      <enabled>
+        <move logged="true"/>
+      </enabled>
+      <atLocations>dR1R10</atLocations>                        
+    </policy>
+        <policy id="pol006">
+      <credentials>
+        <credItem name="card">
+          <credData name="pin">
+            <variable>Y</variable>  
+          </credData>
+        </credItem>
+		<credItem name="id">
+		</credItem>
+        <credData name="pin">                  
+          <variable>Y</variable>
+        </credData>
+      </credentials>    
+      <enabled>
+        <move logged="true"/>
+      </enabled>
+      <atLocations>dR2R3</atLocations>                        
+    </policy>
+        <policy id="pol007">
+      <credentials>
+        <credItem name="card">
+          <credData name="pin">
+            <variable>Y</variable>  
+          </credData>
+        </credItem>
+		<credItem name="id">
+		</credItem>
+        <credData name="pin">                  
+          <variable>Y</variable>
+        </credData>
+      </credentials>    
+      <enabled>
+        <move logged="true"/>
+      </enabled>
+      <atLocations>dR2R4</atLocations>                        
+    </policy>
+    <policy id="pol008">
 	  <credentials>
 		<credItem name="key">
 		</credItem>
@@ -411,67 +472,7 @@
 	  <enabled>
 		<move logged="false" />
 	  </enabled>
-	  <atLocations>dR1R2</atLocations>
-	</policy>
-	<policy id="pol004">
-	  <credentials>
-		<credItem name="key">
-		</credItem>
-		<credItem name="janitor">
-		</credItem>
-	  </credentials>
-	  <enabled>
-		<move logged="false" />
-	  </enabled>
-	  <atLocations>dR2R1</atLocations>
-	</policy>
-	<policy id="pol005">
-	  <credentials>
-		<credItem name="card">
-		</credItem>
-		<credItem name="id">
-		</credItem>
-	  </credentials>
-	  <enabled>
-		<move logged="true" />
-	  </enabled>
-	  <atLocations>dR1R4</atLocations>
-	</policy>
-	<policy id="pol006">
-	  <credentials>
-		<credItem name="card">
-		</credItem>
-		<credItem name="id">
-		</credItem>
-	  </credentials>
-	  <enabled>
-		<move logged="true" />
-	  </enabled>
-	  <atLocations>dR4R5</atLocations>
-	</policy>
-	<policy id="pol007">
-	  <credentials>
-		<credItem name="card">
-		</credItem>
-		<credItem name="id">
-		</credItem>
-	  </credentials>
-	  <enabled>
-		<move logged="true" />
-	  </enabled>
-	  <atLocations>dR6R7</atLocations>
-	</policy>
-	<policy id="pol008">
-	  <credentials>
-		<credItem name="card">
-		</credItem>
-		<credItem name="id">
-		</credItem>
-	  </credentials>
-	  <enabled>
-		<move logged="true" />
-	  </enabled>
-	  <atLocations>dR4R7</atLocations>
+	  <atLocations>dR1R11</atLocations>
 	</policy>
 	<policy id="pol009">
 	  <credentials>
@@ -485,7 +486,7 @@
 	  <enabled>
 		<move logged="true" /> <!-- Server login, therefore the actor don't actually move. However we just need to know it is in a log -->
 	  </enabled>
-	  <atLocations>cR7S1</atLocations>
+	  <atLocations>cR3S1</atLocations>
 	</policy>
 	<policy id="pol010">
 	  <credentials>
@@ -499,17 +500,7 @@
 	  <enabled>
 		<move logged="true" /> <!-- Server login, therefore the actor don't actually move. However we just need to know it is in a log -->
 	  </enabled>
-	  <atLocations>cS1R7</atLocations>
-	</policy>
-	<policy id="pol011">
-	  <credentials>
-		<credItem name="employee">
-		</credItem>
-	  </credentials>
-	  <enabled>
-		<move logged="true" />
-	  </enabled>
-	  <atLocations>dR4R6</atLocations>
+	  <atLocations>cS1R3</atLocations>
 	</policy>
   </policies>
 
