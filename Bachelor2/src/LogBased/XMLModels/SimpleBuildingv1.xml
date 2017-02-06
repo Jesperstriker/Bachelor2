@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system 
+    xmlns="https://www.trespass-project.eu/schemas/TREsPASS_model"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://www.trespass-project.eu/schemas/TREsPASS_model https://www.trespass-project.eu/schemas/TREsPASS_model.xsd" 
+    author="Christian Toftemann Baek" 
+    date="21-03-2016" 
+    version="1.1"
+    id="test" >
+  <title>Simple Building TREsPASS Inside attackers</title>
+  <locations> 
+	<!--><Physical connections/!-->
+    <location id="s"/>
+    <location id="R1"/>
+    <location id="R2"/>
+    <location id="R3"/>
+    <location id="R4"/>
+    <location id="R5"/>
+    <location id="R6"/>
+    <location id="R7"/>
+	<!-->Network connection</!-->
+	<location id="S1"/>
+	<!-->doors to physical connections. Used for the different locks</!-->
+	<location id="dR1R3"/>
+	<location id="dR3R1"/>
+	<location id="dR1R2"/>
+	<location id="dR2R1"/>
+	<location id="dR1R4"/>
+	<location id="dR4R5"/>
+	<location id="dR4R7"/>
+	<location id="dR6R7"/>
+	<location id="dR4R6"/>
+	<!-->Network connection "d". Used to check the use of roles on actors</!-->
+	<location id="cR7S1"/>
+	<location id="cS1R7"/>
+  </locations>
+  <edges>
+    <edge directed="true">
+      <source>s</source>
+      <target>R1</target><metrics><metric
+        name="time" value="1"/></metrics>
+    </edge>
+	<edge directed="true">
+      <source>R1</source>
+      <target>s</target><metrics><metric
+        name="time" value="2"/></metrics>
+    </edge>
+    <edge directed="true">
+      <source>R1</source>
+      <target>dR1R3</target><metrics><metric
+        name="time" value="3"/></metrics>
+    </edge>
+	<edge directed="true">
+      <source>dR1R3</source>
+      <target>R3</target><metrics><metric
+        name="time" value="4"/></metrics>
+    </edge>
+    <edge directed="true">
+      <source>R3</source>
+      <target>dR3R1</target><metrics><metric
+        name="time" value="5"/></metrics>
+    </edge>
+	<edge directed="true">
+      <source>dR3R1</source>
+      <target>R1</target><metrics><metric
+        name="time" value="6"/></metrics>
+    </edge>
+    <edge directed="true">
+      <source>R1</source>
+      <target>dR1R2</target><metrics><metric
+        name="time" value="7"/></metrics>
+    </edge>
+	<edge directed="true">
+      <source>dR1R2</source>
+      <target>R2</target><metrics><metric
+        name="time" value="8"/></metrics>
+    </edge>			
+    <edge directed="true">
+      <source>R2</source>
+      <target>dR2R1</target><metrics><metric
+        name="time" value="9"/></metrics>
+    </edge>
+	<edge directed="true">
+      <source>dR2R1</source>
+      <target>R1</target><metrics><metric
+        name="time" value="10"/></metrics>
+    </edge>
+    <edge directed="true">
+      <source>R4</source>
+      <target>R1</target><metrics><metric
+        name="time" value="11"/></metrics>
+    </edge>
+	<edge directed="true">
+      <source>R1</source>
+      <target>dR1R4</target><metrics><metric
+        name="time" value="12"/></metrics>
+    </edge>	
+	<edge directed="true">
+      <source>dR1R4</source>
+      <target>R4</target><metrics><metric
+        name="time" value="13"/></metrics>
+    </edge>	
+	<edge directed="true">
+      <source>R6</source>
+      <target>R4</target><metrics><metric
+        name="time" value="14"/></metrics>
+    </edge>	
+	<edge directed="true">
+      <source>R4</source>
+      <target>dR4R6</target><metrics><metric
+        name="time" value="15"/></metrics>
+    </edge>	
+	<edge directed="true">
+      <source>dR4R6</source>
+      <target>R6</target><metrics><metric
+        name="time" value="16"/></metrics>
+    </edge>
+	<edge directed="true">
+      <source>R4</source>
+      <target>dR4R5</target><metrics><metric
+        name="time" value="17"/></metrics>
+    </edge>	
+	<edge directed="true">
+      <source>dR4R5</source>
+      <target>R5</target><metrics><metric
+        name="time" value="18"/></metrics>
+    </edge>
+	<edge directed="true">
+      <source>R5</source>
+      <target>R4</target><metrics><metric
+        name="time" value="19"/></metrics>
+    </edge>
+	<edge directed="true">
+      <source>R7</source>
+      <target>R4</target><metrics><metric
+        name="time" value="20"/></metrics>
+    </edge>
+	<edge directed="true">
+      <source>R4</source>
+      <target>dR4R7</target><metrics><metric
+        name="time" value="21"/></metrics>
+    </edge>	
+	<edge directed="true">
+      <source>dR4R7</source>
+      <target>R7</target><metrics><metric
+        name="time" value="22"/></metrics>
+    </edge>
+	<edge directed="true">
+      <source>R6</source>
+      <target>dR6R7</target><metrics><metric
+        name="time" value="23"/></metrics>
+    </edge>
+	<edge directed="true">
+      <source>dR6R7</source>
+      <target>R7</target><metrics><metric
+        name="time" value="24"/></metrics>
+    </edge>
+	<edge directed="true">
+      <source>R7</source>
+      <target>cR7S1</target><metrics><metric
+        name="time" value="1"/></metrics>
+    </edge>
+	<edge directed="true">
+      <source>cR7S1</source>
+      <target>S1</target><metrics><metric
+        name="time" value="1"/></metrics>
+    </edge>
+	<edge directed="true">
+      <source>S1</source>
+      <target>cS1R7</target><metrics><metric
+        name="time" value="1"/></metrics>
+    </edge>
+	<edge directed="true">
+      <source>cS1R7</source>
+      <target>R7</target><metrics><metric
+        name="time" value="1"/></metrics>
+    </edge>	
+  </edges>
+  
+  
+  
+  <assets>
+    <item name="card" id="c001">
+      <atLocations>Alice</atLocations>
+    </item>
+    <item name="card" id="c002">
+      <atLocations>Bob</atLocations>
+    </item>
+    <item name="card" id="c003">
+      <atLocations>Charlie</atLocations>
+    </item>
+    <item name="card" id="c004">
+      <atLocations>Daisey</atLocations>
+    </item>
+    <item name="card" id="c005">
+      <atLocations>Emilia</atLocations>
+    </item>
+    <item name="card" id="c006">
+      <atLocations>Fred</atLocations>
+    </item>
+    <item name="card" id="c007">
+      <atLocations>George</atLocations>
+    </item>
+    <item name="card" id="c008">
+      <atLocations>Hadrian</atLocations>
+    </item>
+    <item name="card" id="c009">
+      <atLocations>Irisa</atLocations>
+    </item>
+    <item name="card" id="c010">
+      <atLocations>John</atLocations>
+    </item>
+	<!-- Hack to allow us to specify for a given policy if the persons id is logged. Usefull when generating the logdata-->
+	<item name="id" id="c011">
+	  <atLocations>Alice Bob Charlie Daisey Emilia Fred George Hadrian Irisa John</atLocations>
+	</item>
+	<data name="pin" id="p001" value="1234">
+      <atLocations>Alice c001</atLocations>
+    </data>
+	<data name="pin" id="p002" value="1254">
+      <atLocations>Bob c002</atLocations>
+    </data>
+	<data name="pin" id="p003" value="8984">
+      <atLocations>Charlie c003</atLocations>
+    </data>
+	<data name="pin" id="p004" value="2599">
+      <atLocations>Daisey c004</atLocations>
+    </data>
+	<data name="pin" id="p005" value="8295">
+      <atLocations>Emilia c005</atLocations>
+    </data>
+	<data name="pin" id="p006" value="9876">
+      <atLocations>Fred c006</atLocations>
+    </data>
+	<data name="pin" id="p007" value="7254">
+      <atLocations>George c007</atLocations>
+    </data>
+	<data name="pin" id="p008" value="1112">
+      <atLocations>Hadrian c008</atLocations>
+    </data>
+	<data name="pin" id="p009" value="2123">
+      <atLocations>Irisa c009</atLocations>
+    </data>
+	<data name="pin" id="p010" value="2828">
+      <atLocations>John c010</atLocations>
+    </data>
+	<item name="key" id="k001">
+	  <atLocations>Bob</atLocations>
+	</item>
+	<!-- Hack to add a role requirement to edges -->
+	<item name="janitor" id="r001">
+		<atLocations>Bob</atLocations>
+	</item>
+	<item name="admin" id="r002">
+		<atLocations>Alice John</atLocations>
+	</item>
+	<item name="employee" id="r003">
+		<atLocations>Alice Bob Charlie Daisey Emilia Fred George Hadrian Irisa John </atLocations>
+	</item>
+	<!-- End of hack -->
+	<data name="adminPassword" id="ap001" value="admpswalice">
+	  <atLocations>Alice</atLocations>
+	</data>
+	<data name="adminPassword" id="ap002" value="admpswjohn">
+	  <atLocations>John</atLocations>
+	</data>
+  </assets>
+  
+  
+  <actors>
+    <actor id="Alice">
+      <atLocations>s</atLocations>
+    </actor>
+    <actor id="Bob">
+      <atLocations>s</atLocations>
+    </actor>
+    <actor id="Charlie">
+      <atLocations>s</atLocations>
+    </actor>
+	<actor id="Daisey">
+      <atLocations>s</atLocations>
+    </actor>
+    <actor id="Emilia">
+      <atLocations>s</atLocations>
+    </actor>
+    <actor id="Fred">
+      <atLocations>s</atLocations>
+    </actor>
+    <actor id="George">
+      <atLocations>s</atLocations>
+    </actor>
+    <actor id="Hadrian">
+      <atLocations>s</atLocations>
+    </actor>
+    <actor id="Irisa">
+      <atLocations>s</atLocations>
+    </actor>
+    <actor id="John">
+      <atLocations>s</atLocations>
+    </actor>
+  </actors>
+
+  <!-- This type of decleration no longer works
+  <roles>
+	<role id="employee">
+	  <actors>
+		<actorID>Alice</actorID>
+		<actorID>Bob</actorID>
+		<actorID>Charlie</actorID>
+		<actorID>Daisey</actorID>
+		<actorID>Emilia</actorID>
+		<actorID>Fred</actorID>
+		<actorID>George</actorID>
+		<actorID>Hadrian</actorID>
+		<actorID>Irisa</actorID>
+		<actorID>John</actorID>
+	  </actors>
+	</role>
+	<role id="admin">
+	  <actors>
+	    <actorID>John</actorID>
+		<actorID>Alice</actorID>
+	  </actors>
+	</role>
+	<role id="janitor">
+	  <actors>
+	    <actorID>Bob</actorID>
+	  </actors>
+	</role>
+  </roles>
+ -->
+  <policies>
+    <policy id="pol001">
+      <credentials>
+        <credItem name="card">
+          <credData name="pin">
+            <variable>Y</variable>  
+          </credData>
+        </credItem>
+		<credItem name="id">
+		</credItem>
+        <credData name="pin">                  
+          <variable>Y</variable>
+        </credData>
+      </credentials>    
+      <enabled>
+        <move logged="true"/>
+      </enabled>
+      <atLocations>dR1R3</atLocations>                        
+    </policy>
+	<policy id="pol002">
+      <credentials>
+        <credItem name="card">
+          <credData name="pin">
+            <variable>Y</variable>  
+          </credData>
+        </credItem>
+		<credItem name="id">
+		</credItem>
+        <credData name="pin">                  
+          <variable>Y</variable>
+        </credData>
+      </credentials>    
+      <enabled>
+        <move logged="true"/>
+      </enabled>
+      <atLocations>dR3R1</atLocations>                        
+    </policy>
+	<policy id="pol003">
+	  <credentials>
+		<credItem name="key">
+		</credItem>
+		<credItem name="janitor">
+		</credItem>
+	  </credentials>
+	  <enabled>
+		<move logged="false" />
+	  </enabled>
+	  <atLocations>dR1R2</atLocations>
+	</policy>
+	<policy id="pol004">
+	  <credentials>
+		<credItem name="key">
+		</credItem>
+		<credItem name="janitor">
+		</credItem>
+	  </credentials>
+	  <enabled>
+		<move logged="false" />
+	  </enabled>
+	  <atLocations>dR2R1</atLocations>
+	</policy>
+	<policy id="pol005">
+	  <credentials>
+		<credItem name="card">
+		</credItem>
+		<credItem name="id">
+		</credItem>
+	  </credentials>
+	  <enabled>
+		<move logged="true" />
+	  </enabled>
+	  <atLocations>dR1R4</atLocations>
+	</policy>
+	<policy id="pol006">
+	  <credentials>
+		<credItem name="card">
+		</credItem>
+		<credItem name="id">
+		</credItem>
+	  </credentials>
+	  <enabled>
+		<move logged="true" />
+	  </enabled>
+	  <atLocations>dR4R5</atLocations>
+	</policy>
+	<policy id="pol007">
+	  <credentials>
+		<credItem name="card">
+		</credItem>
+		<credItem name="id">
+		</credItem>
+	  </credentials>
+	  <enabled>
+		<move logged="true" />
+	  </enabled>
+	  <atLocations>dR6R7</atLocations>
+	</policy>
+	<policy id="pol008">
+	  <credentials>
+		<credItem name="card">
+		</credItem>
+		<credItem name="id">
+		</credItem>
+	  </credentials>
+	  <enabled>
+		<move logged="true" />
+	  </enabled>
+	  <atLocations>dR4R7</atLocations>
+	</policy>
+	<policy id="pol009">
+	  <credentials>
+		<credItem name="admin">
+		  <credData name="adminPassword">
+		  </credData>
+		</credItem>
+		<credItem name="id">
+		</credItem>
+	  </credentials>
+	  <enabled>
+		<move logged="true" /> <!-- Server login, therefore the actor don't actually move. However we just need to know it is in a log -->
+	  </enabled>
+	  <atLocations>cR7S1</atLocations>
+	</policy>
+	<policy id="pol010">
+	  <credentials>
+		<credItem name="admin">
+		  <credData name="adminPassword">
+		  </credData>
+		</credItem>
+		<credItem name="id">
+		</credItem>
+	  </credentials>
+	  <enabled>
+		<move logged="true" /> <!-- Server login, therefore the actor don't actually move. However we just need to know it is in a log -->
+	  </enabled>
+	  <atLocations>cS1R7</atLocations>
+	</policy>
+	<policy id="pol011">
+	  <credentials>
+		<credItem name="employee">
+		</credItem>
+	  </credentials>
+	  <enabled>
+		<move logged="true" />
+	  </enabled>
+	  <atLocations>dR4R6</atLocations>
+	</policy>
+  </policies>
+
+  <!-- Used to get role representations in the program -->
+  <predicates>
+    <predicate id="role" arity="2">
+      <value>employee Charlie</value>
+	  <value>employee Daisey</value>
+	  <value>employee Emilia</value>
+	  <value>employee Fred</value>
+	  <value>employee George</value>
+	  <value>employee Hadrian</value>
+	  <value>employee Irisa</value>
+	  <value>janitor Bob</value>
+	  <value>admin Alice</value>
+	  <value>admin John</value>
+    </predicate>
+	<predicate id="role_hierarchy" arity="2">
+	  <value>admin janitor</value>
+	  <value>janitor employee</value>
+	</predicate>
+  </predicates>
+
+</system>

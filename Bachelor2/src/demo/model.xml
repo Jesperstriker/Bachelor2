@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<system author="attack navigator map (trespass.js)" date="25-09-2015" version="0.0.0" 
+  xmlns="https://www.trespass-project.eu/schemas/TREsPASS_model" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.trespass-project.eu/schemas/TREsPASS_model.xsd">
+  <title>ANM-generated TREsPASS model</title>
+  <locations>
+    <location id="office" />
+    <location id="server" />
+    <location id="router" />
+    <location id="laptop" />
+  </locations>
+  <edges>
+    <edge
+        directed="false"><source>server</source><target>router</target><metrics><metric
+        name="time" value="42"/><metric
+        name="length" value="42"/></metrics></edge>
+    <edge directed="false"><source>router</source><target>laptop</target></edge>
+    <edge directed="false"><source>office</source><target>router</target></edge>
+  </edges>
+</system>
