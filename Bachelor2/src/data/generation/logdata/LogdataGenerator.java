@@ -15,7 +15,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-
+//Made by Jesper Riis Douglas
 public class LogdataGenerator {
 	private static HashMap<Integer, HashSet<Actor>> availableActors = new HashMap<Integer, HashSet<Actor>>();
 
@@ -186,7 +186,7 @@ public class LogdataGenerator {
 			return Math.random() >= 1.0 - probability;
 		}
 	}
-
+//Not made by Jesper ------->
 	private static String selectRandomConnection(HashMap<String, Connection> successors, Actor actor,
 			HashMap<String, Role> rh) {
 		Random r = new Random();
@@ -205,6 +205,7 @@ public class LogdataGenerator {
 		return null;
 
 	}
+//Not made by Jesper ends <------
 
 	private static boolean move() {
 		Random rand = new Random();

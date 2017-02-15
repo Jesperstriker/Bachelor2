@@ -22,11 +22,11 @@ public class Run {
 //	static String user = "bach2";
 	static String user = "jespe";
 	//Enter xml model path
-	static String modelLocation = "C:/Users/" + user + "/Documents/7.Semester/Bachelor/project/Bachelor/src/LogBased/XMLModels/SimpleBuildingv1.xml";
+	static String modelLocation = "C:/Users/" + user + "/Documents/7.Semester/Bachelor/project/Bachelor/src/LogBased/XMLModels/SimpleOffice.xml";
 	//Enter log data output path
-	static String logdataLocation = "C:/Users/" + user + "/Documents/7.Semester/Bachelor/Code/LogBased/Logdata/logdata.txt";
+	static String logdataLocation = "C:/Users/" + user + "/Documents/7.Semester/Bachelor/project/Bachelor/Code/LogBased/Logdata/logdata.txt";
 	//Enter path for removed log entries (eg. tailgating violations)
-	static String errorLogLocation = "C:/Users/" + user + "/Documents/7.Semester/Bachelor/Code/LogBased/Logdata/logdataerror.txt"; 
+	static String errorLogLocation = "C:/Users/" + user + "/Documents/7.Semester/Bachelor/project/Bachelor/Code/LogBased/Logdata/logdataerror.txt"; 
 	
 	//Declaration of model components
 	static BuildingModel bm;

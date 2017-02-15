@@ -37,11 +37,12 @@ public class BmTest {
 	public void checkBM() {
 		Automaton automaton  = bm.getENFA();
 		Node startnode = automaton.getAllNodes().get("s");
+		Connection connection;
 		HashMap<String,Connection> successors = startnode.getSuccessors();
 		//Starting from s, only one successor (should be the hall).
 		assertEquals(1, successors.size());
-		successors.get("R1");
-		
+		connection = successors.get("R1");
+		successors.get("R2");
 	}
 
 	

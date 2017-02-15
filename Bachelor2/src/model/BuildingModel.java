@@ -35,10 +35,10 @@ public class BuildingModel {
 		boolean flag = true;
 		for (Actor actor : getActors().values()) {
 			if (flag) {
-				s = String.format("%-30s", actor.getName());
+				s = String.format("%-50s", actor.getName());
 				flag = false;
 			} else {
-				s = String.format("%s %-30s", s, actor.getName());
+				s = String.format("%s %-50s", s, actor.getName());
 			}
 		}
 		return String.format("%s %-20s", s,"Time");
@@ -46,7 +46,7 @@ public class BuildingModel {
 	public String actorLocationsToString(int t){
 		String s = "";
 		for (Actor actor : actors.values()){
-		s = String.format("%s %-30s", s, actor.locationsToString());
+		s = String.format("%s %-50s", s, actor.locationsToString());
 		}
 		return String.format("%s %-10d", s,t);
 	}

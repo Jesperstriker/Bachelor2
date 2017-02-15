@@ -15,7 +15,7 @@ import automaton.components.Node;
 import data.access.Log;
 import data.access.LogReader;
 import model.*;
-
+//Made by Jesper Riis Douglas
 public class Logic2 {
 	static Set<Movement> possibleMoves = new HashSet<Movement>();
 
