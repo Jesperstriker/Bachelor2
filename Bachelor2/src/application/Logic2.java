@@ -1,6 +1,7 @@
 package application;
 
 import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -10,6 +11,7 @@ import java.util.Map;
 import java.util.Set;
 
 import automaton.Automaton;
+import automaton.Movement;
 import automaton.components.Connection;
 import automaton.components.Node;
 import data.access.Log;
@@ -63,7 +65,7 @@ public class Logic2 {
 			// Finds possible locations the actor can move to.
 			for (Iterator<Movement> i = possibleMoves.iterator(); i.hasNext();) {
 				Movement movement = i.next();
-				if (movement.edgeTime + movement.getTime() == t) {
+				if (movement.getEdgeTime() + movement.getTime() == t) {
 					movement.getActor().addLocation(movement.getlocTarget());
 					i.remove();
 				}

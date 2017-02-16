@@ -72,7 +72,6 @@ public class Run {
 		Path path = Paths.get(logdataLocation);
 		Path errorPath = Paths.get(errorLogLocation);
 		LogdataGenerator.generateLogdata(bm, path,errorPath, numberOfLogs, tailgatingViolations, cardViolations);
-		//LogDataGeneratorOld.generateLogdataOld(bm, path, errorPath, numberOfLogs, tailgatingViolations, cardViolations);
 	}
 
 	private static void initBuilding()

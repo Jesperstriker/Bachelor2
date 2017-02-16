@@ -215,7 +215,6 @@ public class Tools {
 					
 
 					n.addSuccessor(succ.getName(),c);; 
-				//System.out.println("from: "+n.getName()+" to: "+successor);
 				}		
 			}
 
@@ -224,10 +223,8 @@ public class Tools {
 			
 			a.addNode(n);
     	}
-		//System.out.println(a.toString());
 		if(simplify)
 		{
-			//System.out.println("simplified");
 			return simplifyAutomaton(a);
 		}
 		return a;

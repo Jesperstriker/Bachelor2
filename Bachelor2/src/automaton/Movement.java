@@ -1,4 +1,4 @@
-package application;
+package automaton;
 
 import automaton.components.Node;
 import model.Actor;
@@ -35,6 +35,9 @@ public class Movement {
 		return time;
 	}
 	
+	public int getEdgeTime(){
+		return edgeTime;
+	}
 	public void setTime(int time){
 		this.time = time;
 	}

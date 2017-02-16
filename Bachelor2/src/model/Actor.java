@@ -62,7 +62,7 @@ public class Actor {
 	{
 		return a.hasTailgated(position, newPos);
 	}
-	
+	//Made by Jesper starts --->
 	public String locationsToString(){
 			boolean flag = true;
 			String s1 = "";
@@ -76,7 +76,8 @@ public class Actor {
 			}
 			return s1;
 	}
-	
+
+	//Made by Jesper ends <-------	
 
 }
 

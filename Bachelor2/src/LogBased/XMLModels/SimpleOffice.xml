@@ -162,11 +162,11 @@
     </edge>
     <edge directed="true">
       <source>R2</source>
-      <target>dR1R3</target><metrics><metric
+      <target>dR2R3</target><metrics><metric
         name="time" value="6"/></metrics>
     </edge>
     <edge directed="true">
-      <source>dR1R3</source>
+      <source>dR2R3</source>
       <target>R3</target><metrics><metric
         name="time" value="1"/></metrics>
     </edge>
@@ -177,11 +177,11 @@
     </edge>
     <edge directed="true">
       <source>R2</source>
-      <target>dR1R4</target><metrics><metric
+      <target>dR2R4</target><metrics><metric
         name="time" value="1"/></metrics>
     </edge>
     <edge directed="true">
-      <source>dR1R4</source>
+      <source>dR2R4</source>
       <target>R4</target><metrics><metric
         name="time" value="1"/></metrics>
     </edge>
